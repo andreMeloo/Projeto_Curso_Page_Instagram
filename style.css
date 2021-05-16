@@ -1,0 +1,328 @@
+/** config. gerais **/
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+html, body, #raiz-principal {
+    height: 100%;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body, button, input, textarea {
+    color: #262626;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+#raiz-principal, article, div, footer, header, main, nav, section {
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    border: 0 solid #000;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+/** head **/
+
+head {
+    display: none;
+}
+
+/** body **/
+
+body {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+body {
+    background: #fff;
+    overflow-y: scroll;
+}
+
+#raiz-principal {
+    z-index: 0;
+}
+
+/** section **/
+
+.secao-total2 {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.secao-total1 {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+/** main **/
+
+.formulario-e-fotos {
+    background-color: #fafafa;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -webkit-box-ordinal-group: 5;
+    order: 4;
+}
+
+/** article **/
+
+    /** box das fotos **/
+
+.boxForm-boxPhoto {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 32px auto 0;
+    max-width: 935px;
+    padding-bottom: 32px;
+    width: 100%;
+}
+
+.box-photos {
+    align-self: center;
+    background-image: url("img/fotos-celulares.png");
+    background-position: 0 0;
+    background-size: 454px 618px;
+    flex-basis: 454px;
+    height: 618px;
+    margin-left: -35px;
+    margin-right: -15px;
+}
+
+.photos {
+    margin: 99px 0 0 151px;
+    position: relative;
+    background: #000;
+}
+
+.todas-photos {
+    margin-top: 12.5px;
+    margin-left: 2.9px;
+    height: 414.5px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 225.5px;
+}
+
+.ajuste-photo, .muda-photo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.muda-photo {
+    transition: opacity 1.5s ease-in;
+    z-index: 1;
+}
+
+/** formulário login e senha **/
+
+.box-form {
+    color: #262626;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 12px;
+    max-width: 350px;
+}
+
+.formulario {
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+}
+
+.logo-insta {
+    margin: 22px auto 12px;
+    background-repeat: no-repeat;
+    background-position: 0 -130px;
+    height: 51px;
+    width: 175px;
+    display: block;
+    overflow: hidden;
+    text-indent: 110%;
+    white-space: nowrap;
+}
+
+.ajuste-form {
+    margin-bottom: 10px;
+    max-width: 350px;
+    width: 100%;
+}
+
+.form-login-senha {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.form-campos {
+    margin-top: 24px;
+    -webkit-box-flex: 0;
+    -webkit-box-pack: start;
+    justify-content: start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.guarda-label {
+    margin: 0 40px 6px;
+}
+
+.ajuste-label {
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-appearance: none;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #262626;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+}
+
+.login-senha {
+    display: flex;
+    height: 36px;
+    -webkit-box-flex: 1;
+    flex: 1 0 0;
+    padding: 0;
+    position: relative;
+    margin: 0;
+    min-width: 0;
+}
+
+.span-label {
+    color: #8e8e8e;
+    font-size: 12px;
+    height: 36px;
+    left: 8px;
+    line-height: 36px;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    text-overflow: ellipsis;
+    transform-origin: left;
+    transition: transform ease-out .1s, -webkit-transform ease-out .1s;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.input-label {
+    font-size: 16px;
+    background: #fafafa;
+    border: 0;
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+    margin: 0;
+    outline: 0;
+    overflow: hidden;
+    padding: 9px 0 7px 8px;
+    text-overflow: ellipsis;
+    -webkit-appearance: none;
+}
+
+.unica {
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    height: 100%;
+    padding-right: 8px;
+    vertical-align: middle;
+}
+
+/** botao entrar **/
+
+.guarda-botao-entrar {
+    margin-top: 8px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 8px;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.button-entrar {
+    background-color: rgba(0, 149, 246, .3);
+    opacity: 1;
+    border: 1px solid transparent;
+    pointer-events: none;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 1);
+    position: relative;
+    appearance: none;
+    background: 0 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    font-weight: 600;
+    padding: 5px 9px;
+    text-align: center;
+    text-transform: inherit;
+    text-overflow: ellipsis;
+    user-select: none;
+    width: auto;
+}
+
+
+
+
+
+
+
+
