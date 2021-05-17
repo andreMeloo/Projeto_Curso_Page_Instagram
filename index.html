@@ -16,6 +16,7 @@
                                 <img class="todas-photos ajuste-photo" src="img/insta-photo1.jpeg" >
                                 <img class="todas-photos muda-photo" src="img/insta-photo2.jpg" >
                                 <img class="todas-photos" src="img/insta-photo3.jpg" >
+                                <img class="todas-photos" src="img/insta-photo4.jpg" >
                             </div>
                         </div>
                         <div class="box-form">
@@ -28,7 +29,7 @@
                                                 <div class="ajuste-label">
                                                     <label class="login-senha">
                                                         <span class="span-label">Telefone, nome de usuário ou email</span>
-                                                        <input aria-label="Telefone, nome de usuário ou email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" name="username" type="text" class="input-label">
+                                                        <input aria-label="Telefone, nome de usuário ou email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" name="username" type="text" class="input-label" value="">
                                                     </label>
                                                     <div class="unica"></div>
                                                 </div>
@@ -37,24 +38,24 @@
                                                 <div class="ajuste-label">
                                                     <label class="login-senha">
                                                         <span class="span-label">Senha</span>
-                                                        <input aria-label="Telefone, nome de usuário ou email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" name="username" type="text" class="input-label">
+                                                        <input aria-label="Telefone, nome de usuário ou email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" name="username" type="text" class="input-label" value="">
                                                     </label>
                                                     <div class="unica"></div>
                                                 </div>
                                             </div>
                                             <div class="guarda-botao-entrar">
-                                                <button class="button-entrar1 botao-entrar2" type="submit" disabled>
+                                                <button class="button-entrar" type="submit" disabled>
                                                     <div class="ajustes-botao">Entrar</div>
                                                 </button>
                                             </div>
                                             <div class="divisao">
                                                 <div class="linha"></div>
-                                                <div class="pl-OU">OU</div>
+                                                <div class="pl-OU">ou</div>
                                                 <div class="linha"></div>
                                             </div>
-                                            <div class="entra-face">
+                                            <div class="guarda-botao-entrar">
                                                 <button class="butao-face" type="button">
-                                                    <img src="img/facebook-icone.png" alt="icone-face">
+                                                    <img class="icone-face" src="img/facebook-icone.png" alt="icone-face">
                                                     <span class="entra-facebook">Entrar com o Facebook</span>
                                                 </button>
                                             </div>
@@ -68,27 +69,29 @@
                                     <p class="par-naoConta">
                                         Não tem uma conta? 
                                         <a href="index.html" class="cria-conta">
-                                            <span class="cadstre-se">Cadastre-se</span>
+                                            <span class="cadastre-se">Cadastre-se</span>
                                         </a>
                                     </p>
                                 </div>
                             </div>
                             <div class="app-android-apple">
                                 <p class="obt-app">Obtenha o aplicativo.</p>
-                                <a href="https://apps.apple.com/app/instagram/id389801252?vt=lo" class="adquira-app" target="_blank">
-                                    <img src="img/apple-button.png" alt="Adiquira o app" class="appStore">
-                                </a>
-                                <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DFAE11BC7-9AFF-442E-AFE8-C836A038D606%26utm_content%3Dlo%26utm_medium%3Dbadge" class="adquira-app" target="_blank">
-                                    <img src="img/googleplay-button.png" alt="Adiquira o app" class="appStore">
-                                </a>
+                                <div class="guarda-apps">
+                                    <a href="https://apps.apple.com/app/instagram/id389801252?vt=lo" class="adquira-app" target="_blank">
+                                        <img src="img/apple-button.png" alt="Adiquira o app" class="appStore">
+                                    </a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DFAE11BC7-9AFF-442E-AFE8-C836A038D606%26utm_content%3Dlo%26utm_medium%3Dbadge" class="adquira-app" target="_blank">
+                                        <img src="img/googleplay-button.png" alt="Adiquira o app" class="appStore">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </article>
                 </main>
                 <footer class="rodape">
-                    <div class="rodape-ajustes">
-                        <div class="rodape-cima">
-                            <div class="atalhos">
+                    <div class="rodape-ajustes margem-rodape">
+                        <div class="rodape-ajustes rodape-cima">
+                            <div class="atalhos ajuste-atalho">
                                 <div class="atalhos-ajustes">
                                     <a href="https://about.instagram.com/" target="_blank">
                                         <div class="atalho-nomes">Sobre</div>
@@ -141,7 +144,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="rodape-baixo">
+                        <div class="rodape-baixo atalhos">
                             <div class="idiomas">
                                 <span class="sIdiomas">
                                     <div class="nome-idioma">
@@ -154,7 +157,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <select aria-label="Trocar idioma de exibição" class="selacao-idioma">
+                                    <select aria-label="Trocar idioma de exibição" class="selacao-idioma" onchange="javascript:selected()">
                                         <option value="af">Afrikaans</option>
                                         <option value="cs">Čeština</option>
                                         <option value="da">Dansk</option>
@@ -216,5 +219,11 @@
             </section>
         </div>
         <script src="script.js"></script>
+        <div class="div1"></div>
+        <div id=fb_root class="div2">
+            <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+                <div></div>
+            </div>
+        </div>
     </body>
 </html>

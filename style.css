@@ -14,6 +14,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     border: 0;
     font: inherit;
     vertical-align: baseline;
+    text-decoration: none;
 }
 
 body, button, input, textarea {
@@ -21,6 +22,10 @@ body, button, input, textarea {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     font-size: 14px;
     line-height: 18px;
+}
+
+button {
+    margin: 0;
 }
 
 #raiz-principal, article, div, footer, header, main, nav, section {
@@ -127,14 +132,14 @@ body {
 
 .todas-photos {
     margin-top: 12.5px;
-    margin-left: 2.9px;
-    height: 414.5px;
+    margin-left: -9px;
+    height: 420px;
     left: 0;
     opacity: 0;
     position: absolute;
     top: 0;
     visibility: hidden;
-    width: 225.5px;
+    width: 234px;
 }
 
 .ajuste-photo, .muda-photo {
@@ -226,6 +231,12 @@ body {
     width: 100%;
 }
 
+.acende-borda-label {
+    border: 1px solid #a8a8a8;
+}
+
+
+
 .login-senha {
     display: flex;
     height: 36px;
@@ -236,6 +247,7 @@ body {
     margin: 0;
     min-width: 0;
 }
+
 
 .span-label {
     color: #8e8e8e;
@@ -249,9 +261,13 @@ body {
     right: 0;
     text-overflow: ellipsis;
     transform-origin: left;
-    transition: transform ease-out .1s, -webkit-transform ease-out .1s;
+    transition: transform ease-out .1s, transform ease-out .1s;
     user-select: none;
     white-space: nowrap;
+}
+
+.transform-span, .span-label {
+    transform: scale(.83333) translateY(-10px);
 }
 
 .input-label {
@@ -268,6 +284,11 @@ body {
     -webkit-appearance: none;
 }
 
+.transform-span, .input-label {
+    font-size: 12px;
+    padding: 14px 0 2px 8px!important;
+}
+
 .unica {
     -webkit-box-align: center;
     align-items: center;
@@ -279,6 +300,35 @@ body {
     height: 100%;
     padding-right: 8px;
     vertical-align: middle;
+}
+
+.guarda-botao-mostrar {
+    margin-left: 8px;
+    -webkit-box-flex: 0;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.botao-mostrar {
+    color: #262626;
+    border: 0;
+    display: inline;
+    padding: 0;
+    position: relative;
+    background-color: transparent;
+    appearance: none;
+    background: 0 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    text-overflow: inherit;
+    text-overflow: ellipsis;
+    user-select: none;
+    width: auto;
 }
 
 /** botao entrar **/
@@ -298,13 +348,6 @@ body {
 }
 
 .button-entrar {
-    background-color: rgba(0, 149, 246, .3);
-    opacity: 1;
-    border: 1px solid transparent;
-    pointer-events: none;
-    border-radius: 4px;
-    color: rgba(255, 255, 255, 1);
-    position: relative;
     appearance: none;
     background: 0 0;
     box-sizing: border-box;
@@ -318,6 +361,347 @@ body {
     user-select: none;
     width: auto;
 }
+
+.button-entrar:disabled {
+    background-color: rgba(0, 149, 246, .3);
+    opacity: 1;
+    pointer-events: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    position: relative;
+}
+
+.ajustes-botao {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+/** divisão **/
+
+.divisao {
+    margin: 10px 40px 18px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+}
+
+.linha {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: #dbdbdb;
+    height: 1px;
+    position: relative;
+    top: .45em;
+}
+
+.pl-OU {
+    color: #8e8e8e;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    margin: 0 18px;
+    text-transform: uppercase;
+}
+
+/** botao face **/
+
+.butao-face {
+    border: 0;
+    color: #0095f6;
+    display: inline;
+    padding: 0;
+    position: relative;
+    appearance: none;
+    background: 0 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    text-transform: inherit;
+    text-overflow: ellipsis;
+    user-select: none;
+    width: auto;
+}
+
+.icone-face {
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    top: 3px;
+    background-repeat: no-repeat;
+    background-position: -414px -259px;
+    height: 16px;
+    width: 16px;
+}
+
+.entra-facebook {
+    color: #385185;
+}
+
+/** esq. senha **/
+
+.esquece-senha {
+    color: #00376b;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/** box não tem conta **/
+
+.caixa-naoTemConta {
+    display: block;
+    color: #8e8e8e;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin: -3px 0 -4px;
+}
+
+.par-naoConta {
+    color: #262626;
+    font-size: 14px;
+    margin: 15px;
+    text-align: center;
+}
+
+.cria-conta {
+    color: #00376b;
+}
+
+.cadastre-se {
+    display: inline!important;
+    margin: 0!important;
+    color: #0095f6;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/** box apps **/
+
+.obt-app {
+    color: #262626;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 10px 20px 10px 20px;
+    text-align: center;
+}
+
+.guarda-apps {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+}
+
+.adquira-app {
+    margin-right: 8px;
+}
+
+.appStore {
+    height: 40px;
+}
+
+/** footer ajustes **/
+
+.rodape {
+    background-color: #fafafa;
+    padding-left: 16px;
+    padding-right: 16px;
+    -webkit-box-ordinal-group: 6;
+    order: 5;
+    padding: 0 20px;
+}
+
+.rodape-ajustes {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.margem-rodape {
+    margin-bottom: 52px;
+}
+
+.rodape-cima {
+    margin-top: 24px;
+}
+
+.atalhos {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.ajuste-atalho {
+    flex-wrap: wrap;
+}
+
+.atalhos-ajustes {
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 12px;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    -webkit-box-pack: start;
+    justify-content: stretch;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.atalho-nomes {
+    display: block;
+    color: #8e8e8e;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin: -2px 0 -3px;
+}
+
+.rodape-baixo {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.idiomas {
+    display: block;
+    color: #262626;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin: -2px 0 -3px;
+}
+
+.sidiomas {
+    font-weight: 400;
+    color: #8e8e8e;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.nome-idioma {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.selecao-ajuste {
+    margin-left: 4px;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.icone-seta {
+    display: block;
+    position: relative;
+}
+
+.selacao-idioma {
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.license {
+    margin-left: 16px;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.nome-license {
+    display: block;
+    color: #8e8e8e;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    margin: -2px 0 -3px;
+}
+
+.div1 {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    z-index: 500;
+}
+
+.div2 {
+    background: none;
+    border: 0;
+    border-spacing: 0;
+    color: #000;
+    cursor: auto;
+    direction: ltr;
+    font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+    text-shadow: none;
+    text-transform: none;
+    visibility: visible;
+    white-space: normal;
+    word-spacing: normal;
+}
+
+
+
 
 
 
